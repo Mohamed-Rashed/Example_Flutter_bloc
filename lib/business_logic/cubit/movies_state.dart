@@ -4,3 +4,9 @@ part of 'movies_cubit.dart';
 abstract class MoviesState {}
 
 class MoviesInitial extends MoviesState {}
+
+class CharactersLoaded extends MoviesState{
+  final List<Character> characters;
+
+  CharactersLoaded(this.characters);
+}
