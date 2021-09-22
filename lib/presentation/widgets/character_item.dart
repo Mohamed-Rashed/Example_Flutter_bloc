@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:movieapp/constants/mycolor.dart';
+import 'package:movieapp/constants/strings.dart';
 import 'package:movieapp/data/models/characters.dart';
+import 'package:movieapp/presentation/screens/movie_details.dart';
 
 class CharacterItem extends StatelessWidget {
   final Character character;
@@ -18,7 +20,8 @@ class CharacterItem extends StatelessWidget {
         borderRadius: BorderRadius.circular(8),
       ),
       child: InkWell(
-        //onTap: () => Navigator.pushNamed(context, characterDetailsScreen , arguments: character),
+        onTap: () => Navigator.pushNamed(context, movieDetailsRoute,
+            arguments: character),
         child: GridTile(
           child: Hero(
             tag: character.charId,
